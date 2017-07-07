@@ -1,6 +1,6 @@
-# Disables the loathsome Synaptics touchpad
 [![PyPI version](https://badge.fury.io/py/fuckpad.svg)](https://badge.fury.io/py/fuckpad)
 
+# Disables the loathsome Synaptics touchpad
 Synaptics touchpads tend to work poorly on Linux without lots of
 careful configuration. This module makes disabling and enabling
 the fucking things easier. Turn to `fuckpad` when you're tired of
