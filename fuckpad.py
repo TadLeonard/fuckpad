@@ -14,10 +14,7 @@ Sample usage:
 from __future__ import print_function
 
 import re
-import sys
-
 from subprocess import Popen, PIPE
-from functools import partial
 
 
 def run_subprocess(cmd):

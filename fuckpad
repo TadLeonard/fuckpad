@@ -5,7 +5,6 @@ careful configuration. This script makes disabling/enabling
 the fucking things easier.
 
 Sample usage:
-    
     $ fuckpad
     Disabled touchpad
     $ fuckpad disable
@@ -21,7 +20,7 @@ from fuckpad import XinputError, set_touchpad
 parser = argparse.ArgumentParser("Disables/enables the fucking touchpad")
 parser.add_argument("cmd", nargs="?", choices=["disable", "enable"],
                     help="'enable' to enable the goddamned touchpad, "
-                         "pass no arguments 'disable' to disable it", 
+                         "pass no arguments 'disable' to disable it",
                     default="disable")
 
 

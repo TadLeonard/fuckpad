@@ -1,5 +1,3 @@
-[![PyPI version](https://badge.fury.io/py/fuckpad.svg)](https://badge.fury.io/py/fuckpad)
-
 # Disables the loathsome Synaptics touchpad
 Synaptics touchpads tend to work poorly on Linux without lots of
 careful configuration. This module makes disabling and enabling
@@ -27,5 +25,7 @@ Enabled touchpad
 ```
 
 # Installation
+[![PyPI version](https://badge.fury.io/py/fuckpad.svg)](https://badge.fury.io/py/fuckpad)
+
 Install with `pip install fuckpad`. Requires Python 2.7/3.0+.
 Tested on Ubuntu with the Lenovo X1 Carbon and a much older ThinkPad.
