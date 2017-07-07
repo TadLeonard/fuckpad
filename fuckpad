@@ -1,0 +1,43 @@
+#!/usr/bin/env python
+"""
+Synaptics touchpads tend to work poorly on Linux without lots of
+careful configuration. This script makes disabling/enabling
+the fucking things easier.
+
+Sample usage:
+    
+    $ fuckpad
+    Disabled touchpad
+    $ fuckpad disable
+    Disabled touchpad
+    $ fuckpad enable
+    Enabled touchpad
+"""
+
+import argparse
+from fuckpad import XinputError, set_touchpad
+
+
+parser = argparse.ArgumentParser("Disables/enables the fucking touchpad")
+parser.add_argument("cmd", nargs="?", choices=["disable", "enable"],
+                    help="'enable' to enable the goddamned touchpad, "
+                         "pass no arguments 'disable' to disable it", 
+                    default="disable")
+
+
+# terminal colors
+HEADER = "\033[95m"
+ENDC = "\033[0m"
+FAIL = "\033[91m"
+
+
+if __name__ == "__main__":
+    args = parser.parse_args()
+    do_enable = args.cmd == "enable"
+    try:
+        set_touchpad(do_enable)
+    except XinputError as e:
+        print("{}Error: {}{}".format(FAIL, e, ENDC))
+    else:
+        msg = "Enabled touchpad" if do_enable else "Disabled touchpad"
+        print("{}{}{}".format(HEADER, msg, ENDC))
